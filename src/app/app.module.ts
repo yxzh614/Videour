@@ -1,13 +1,15 @@
+import { UserCenterPage } from './../pages/user-center/user-center';
+import { FriendsPage } from './../pages/friends/friends';
+import { NewVideoPage } from './../pages/new-video/new-video';
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PushVideosPage } from '../pages/push-videos/push-videos'
+import { SearchPage } from './../pages/search/search';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,11 +17,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
     TabsPage,
-    PushVideosPage
+    PushVideosPage,
+    SearchPage,
+    NewVideoPage,
+    FriendsPage,
+    UserCenterPage
   ],
   imports: [
     BrowserModule,
@@ -28,12 +31,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
     TabsPage,
-    PushVideosPage
-    
+    PushVideosPage,
+    SearchPage,
+    NewVideoPage,
+    FriendsPage,
+    UserCenterPage
   ],
   providers: [
     StatusBar,
