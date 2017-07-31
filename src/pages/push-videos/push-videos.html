@@ -7,17 +7,43 @@
 <ion-header>
 
   <ion-navbar>
-    
-     <button ion-button float-left clear><ion-icon name="ios-camera-outline"></ion-icon></button>
+        <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="ios-camera-outline"></ion-icon>
+      </button>
+    </ion-buttons>
    <ion-title>
      全部推送
     </ion-title>
-     <button ion-button float-right clear><ion-icon name="ios-chatboxes-outline"></ion-icon></button>
+             <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="ios-chatboxes-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding class="card-background-page">
+  <ion-card>
+    <img src="img/card_demo.jpg"/>
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+    <ion-item>
+  <ion-icon name="heart" item-start color="danger"></ion-icon>
+  喜欢
+  <ion-badge item-end>260k</ion-badge>
+</ion-item>
+  </ion-card>  
+  <ion-card>
+    <img src="img/card_demo.jpg"/>
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>  
+  <ion-card>
+    <img src="img/card_demo.jpg"/>
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>
 </ion-content>

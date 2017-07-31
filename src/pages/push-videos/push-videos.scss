@@ -1,28 +1,28 @@
 page-push-videos {
-  font-size: 40px;
-  font-family: sans-serif;
-  color: #555;
-}
-/* Add the following CSS block to your own
-stylesheet. */
-.lnr {
-  display: inline-block;
-  fill: currentColor;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.05em;
-}
 
-.lnr-mustache {
-  color: #0F52BA;
-  /* We can use "color" for setting the color
-  of the SVG because we set its "fill" to
-  "currentColor" */
-  font-size: 40px;
-  /* We can use "font-size" for changing the size
-  of the SVG because its width and height were
-  set 1em.
-  To get crisp results, use sizes that are
-  a multiple of 20; because Linearicons was
-  designed on a 20 by 20 grid. */
+}
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
 }
