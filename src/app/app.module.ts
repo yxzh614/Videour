@@ -14,6 +14,8 @@ import { SearchPage } from './../pages/search/search';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import {ComponentsModule} from '../components/components.module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -22,11 +24,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SearchPage,
     NewVideoPage,
     FriendsPage,
-    UserCenterPage
+    UserCenterPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
