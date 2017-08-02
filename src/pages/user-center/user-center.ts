@@ -14,6 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'user-center.html',
 })
 export class UserCenterPage {
+user: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
