@@ -1,3 +1,5 @@
+import { Accounts } from './../../mocks/providers/accounts';
+import { Account } from './../../models/account';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,13 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'user-center.html',
 })
 export class UserCenterPage {
-user: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+account:any
+  constructor(public navCtrl: NavController, public navParams: NavParams,public accounts:Accounts) {
+this.account=accounts.getAccountFromUser()
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UserCenterPage');
   }
-
 }
