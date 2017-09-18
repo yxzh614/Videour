@@ -1,4 +1,4 @@
-import { Http, Request, Response } from "@angular/http";
+import { myHttp } from './../../mocks/providers/myHttp';
 import { Account } from "./../../models/account";
 import { MainPage } from "./../pages";
 import { User } from "./../../providers/user";
@@ -27,24 +27,22 @@ export class LoginPage {
     email: "test@example.com",
     password: "test"
   };
+  res:boolean = false;
+  errorMessage;
   loginOK: boolean;
   constructor(
     public navCtrl: NavController,
     public user: User,
     public navParams: NavParams,
     public toastCtrl: ToastController,
-    public http: Http
+    public myHttp: myHttp
   ) {}
   doLogin() {
-    this.http
-      .post("mock/login.json", {
-        email: this.account.email,
-        password: this.account.password
-      })
-      .map(this.extractData);
-    window.localStorage.user = this.account.email;
-    console.log(this.account.email);
-    this.navCtrl.push(MainPage);
+    this.myHttp.login(this.account).subscribe(
+      res => this.res = res,
+      error => this.errorMessage = <any>error
+    )
+    this.navCtrl.pop();
   }
 
   ionViewDidLoad() {

@@ -1,3 +1,4 @@
+import { myHttp } from './../mocks/providers/myHttp';
 import { SignupPage } from './../pages/signup/signup';
 import { Accounts } from './../mocks/providers/accounts';
 import { Api } from './../providers/api';
@@ -52,7 +53,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},User,Api,Accounts
+    {provide: ErrorHandler, useClass: IonicErrorHandler},User,Api,Accounts,myHttp
   ]
 })
 export class AppModule {}

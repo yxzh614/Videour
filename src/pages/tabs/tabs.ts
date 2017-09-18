@@ -22,10 +22,7 @@ export class TabsPage {
   tab5Root = UserCenterPage;
 
   constructor(public navCtrl: NavController,public accounts:Accounts) {
-    if(!window.localStorage.opened){
-      this.navCtrl.push(WelcomePage)
-    }else if(!window.localStorage.user){
-      //this.navCtrl.push(LoginPage)
+    if(window.localStorage.user) {
     }
   }
 }

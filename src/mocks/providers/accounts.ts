@@ -56,8 +56,6 @@ export class Accounts {
     };
   }
 
-  login(Account: Account) {
-  }
 
 
   private 
@@ -66,7 +64,6 @@ export class Accounts {
     if (!params) {
       return this.accounts;
     }
-
     return this.accounts.filter(account => {
       for (let key in params) {
         let field = account[key];
