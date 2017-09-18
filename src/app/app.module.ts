@@ -1,3 +1,4 @@
+import { SignupPage } from './../pages/signup/signup';
 import { Accounts } from './../mocks/providers/accounts';
 import { Api } from './../providers/api';
 import { User } from './../providers/user';
@@ -30,7 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NewVideoPage,
     FriendsPage,
     UserCenterPage,
-    WelcomePage,LoginPage
+    WelcomePage,LoginPage,SignupPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +47,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NewVideoPage,
     FriendsPage,
     UserCenterPage,
-    WelcomePage,LoginPage
+    WelcomePage,LoginPage,SignupPage
   ],
   providers: [
     StatusBar,

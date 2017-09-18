@@ -1,3 +1,4 @@
+import { MainPage } from './../pages/pages';
 import { WelcomePage } from './../pages/welcome/welcome';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -10,7 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = WelcomePage;
+  rootPage = MainPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

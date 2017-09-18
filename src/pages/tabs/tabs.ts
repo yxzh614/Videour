@@ -1,9 +1,12 @@
+import { LoginPage } from './../login/login';
+import { WelcomePage } from './../welcome/welcome';
+import { NavController } from 'ionic-angular';
 import { UserCenterPage } from './../user-center/user-center';
 import { FriendsPage } from './../friends/friends';
 import { NewVideoPage } from './../new-video/new-video';
 import { SearchPage } from './../search/search';
 import { Component } from '@angular/core';
-
+import { Accounts } from './../../mocks/providers/accounts';
 import { PushVideosPage } from '../push-videos/push-videos';
 
 
@@ -18,7 +21,11 @@ export class TabsPage {
   tab4Root = FriendsPage;
   tab5Root = UserCenterPage;
 
-  constructor() {
-
+  constructor(public navCtrl: NavController,public accounts:Accounts) {
+    if(!window.localStorage.opened){
+      this.navCtrl.push(WelcomePage)
+    }else if(!window.localStorage.user){
+      //this.navCtrl.push(LoginPage)
+    }
   }
 }

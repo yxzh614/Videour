@@ -1,3 +1,4 @@
+import { SignupPage } from './../signup/signup';
 import { LoginPage } from './../login/login';
 import { MainPage } from './../pages';
 import { Component } from '@angular/core';
@@ -18,9 +19,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class WelcomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    window.localStorage.opened = "true";
   }
 login() {
     this.navCtrl.push(LoginPage);
+  }
+  signup() {
+    this.navCtrl.push(SignupPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');

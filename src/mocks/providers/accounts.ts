@@ -1,72 +1,67 @@
-import { Video } from './../../models/video';
-import { Account } from './../../models/account';
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-
+import { Video } from "./../../models/video";
+import { Account } from "./../../models/account";
+import { Injectable } from "@angular/core";
+import { Http, Request, Response } from "@angular/http";
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class Accounts {
   accounts: Account[] = [];
-
-  defaultUser: any = {
-    name: "Burt Bear",
-    profilePic: "assets/img/speakers/bear.jpg",
-    about: "Burt is a Bear."
-  };
-
+  activeAccount: Account;
+  checkLoginUrl: string = "localhost:3000/user/checkLogin";
   constructor(public http: Http) {
     let accounts = [
       {
-        name: "Burt Bear",
-        profilePic: "assets/img/speakers/bear.jpg",
-        about: "Burt is a Bear."
+        email: "526@qq.com",
+        password: "aaa"
       },
       {
-        name: "Charlie Cheetah",
-        profilePic: "assets/img/speakers/cheetah.jpg",
-        about: "Charlie is a Cheetah."
+        email: "526@qq.com",
+        password: "aaa"
       },
       {
-        name: "Donald Duck",
-        profilePic: "assets/img/speakers/duck.jpg",
-        about: "Donald is a Duck."
+        email: "526@qq.com",
+        password: "aaa"
       },
       {
-        name: "Eva Eagle",
-        profilePic: "assets/img/speakers/eagle.jpg",
-        about: "Eva is an Eagle."
+        email: "526@qq.com",
+        password: "aaa"
       },
       {
-        name: "Ellie Elephant",
-        profilePic: "assets/img/speakers/elephant.jpg",
-        about: "Ellie is an Elephant."
+        email: "526@qq.com",
+        password: "aaa"
       },
       {
-        name: "Molly Mouse",
-        profilePic: "assets/img/speakers/mouse.jpg",
-        about: "Molly is a Mouse."
+        email: "526@qq.com",
+        password: "aaa"
       },
       {
-        name: "Paul Puppy",
-        profilePic: "assets/img/speakers/puppy.jpg",
-        about: "Paul is a Puppy."
+        email: "526@qq.com",
+        password: "aaa"
       }
     ];
 
     for (let account of accounts) {
-      this.accounts.push(new Account(account));
+      this.accounts.push(new Account(account.email, account.password));
     }
   }
 
-  getAccountFromUser(params?:any){
+  getAccountFromUser(params?: any) {
     return {
-      "nickName":"ladlasdl",
-      "introduce":"qawedefawegaergawerg",
-      "fanNumber":"2233",
-      "careNumber":"345",
-      "videoListID":"1",
-    }
+      nickName: "ladlasdl",
+      introduce: "qawedefawegaergawerg",
+      fanNumber: "2233",
+      careNumber: "345",
+      videoListID: "1"
+    };
   }
+
+  login(Account: Account) {
+  }
+
+
+  private 
+
   query(params?: any) {
     if (!params) {
       return this.accounts;
@@ -87,13 +82,4 @@ export class Accounts {
       return null;
     });
   }
-
-  add(account: Account) {
-    this.accounts.push(account);
-  }
-
-  delete(account: Account) {
-    this.accounts.splice(this.accounts.indexOf(account), 1);
-  }
 }
-
