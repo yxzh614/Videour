@@ -11,7 +11,7 @@ export class myHttp {
   }
 
   loginURL: string = "";
-
+  checkUserExistURL: string = "";
   login(account: Account) {
     let body = JSON.stringify(account);
     return this.http.post(this.loginURL, body).map(this.extractData).catch(this.handleError);
@@ -19,7 +19,7 @@ export class myHttp {
 
   checkUserNameExist(name: string) {
     let body = JSON.stringify(name);
-    return this.http.post(this.loginURL, body).map(this.extractData).catch(this.handleError);
+    return this.http.post(this.checkUserExistURL, body).map(this.extractData).catch(this.handleError);
   }
 
   signUp(account: Account) {

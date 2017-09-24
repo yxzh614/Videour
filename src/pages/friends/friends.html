@@ -15,68 +15,12 @@
 
 <ion-content>
 <ion-list>
-  <ion-item>
+  <ion-item *ngFor="let friend of friends" (click)="gotoFriendsIndex(friend)">
     <ion-avatar item-start>
       <img src="img/card_demo.jpg">
     </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
-  </ion-item>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="img/card_demo.jpg">
-    </ion-avatar>
-    <h2>Cher</h2>
-    <p>Ugh. As if.</p>
+    <h2>{{friend.nickName}}</h2>
+    <p>{{friend.introduce}}</p>
   </ion-item>
 </ion-list>
 </ion-content>

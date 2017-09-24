@@ -1,12 +1,10 @@
+import { UserCenterPage } from './../user-center/user-center';
+import { Accounts } from './../../mocks/providers/accounts';
+import { sAccount } from './../../models/s-account';
+import { Account } from './../../models/account';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the FriendsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +12,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'friends.html',
 })
 export class FriendsPage {
+  public friends: sAccount[];
+  constructor(public accounts: Accounts, public navCtrl: NavController, public navParams: NavParams) {
+    this.friends = accounts.getFriends()
+  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  gotoFriendsIndex(friend) {
+    console.log(friend)
+    this.navCtrl.push(UserCenterPage, {
+      userId: friend.userId,
+    })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FriendsPage');
   }
-
 }

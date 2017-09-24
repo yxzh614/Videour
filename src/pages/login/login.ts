@@ -42,6 +42,7 @@ export class LoginPage {
       res => this.res = res,
       error => this.errorMessage = <any>error
     )
+    window.localStorage.user = this.account.email;
     this.navCtrl.pop();
   }
 

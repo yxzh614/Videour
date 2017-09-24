@@ -7,14 +7,14 @@
 <ion-header>
 
   <ion-navbar>
-      <ion-buttons start>
+      <ion-buttons *ngIf="myself" start>
           <button ion-button icon-only>
             设置
           </button>
         </ion-buttons>
     <ion-title>user-center</ion-title>
     <ion-buttons end>
-      <button ion-button>
+      <button ion-button *ngIf="myself" (click)="logOut()">
         退出
       </button>
     </ion-buttons>
